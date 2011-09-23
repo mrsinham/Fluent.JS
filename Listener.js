@@ -6,7 +6,7 @@ var Listener = Class.extend({
 		var callbackWithContext = function(event) {
 			callback.call(context, event);
 		}
-		if (object instanceof TwengaObject) {
+		if (object instanceof Listener) {
 			object._addListener(eventName, callbackWithContext);
 		} else if(object instanceof Element) {
 			object.addEventListener(eventName, function(event){
